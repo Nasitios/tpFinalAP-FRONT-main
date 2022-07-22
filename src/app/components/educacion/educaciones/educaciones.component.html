@@ -1,0 +1,5 @@
+<app-agregar-edu (onAgregarEducacion)="agregarEducaciones($event)"></app-agregar-edu>
+<div class="espacio">
+    <app-edu-item *ngFor="let edu of educaciones" [edu]="edu" (onEliminarEdu)="eliminarEducaciones(edu)">
+    </app-edu-item>
+</div>

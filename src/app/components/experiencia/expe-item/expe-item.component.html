@@ -1,0 +1,44 @@
+<div class="contenedorExpe">
+    <div class="expe">
+        <p><b>{{expe.titulo}}</b> - {{expe.empresa}} - {{expe.fecha}} - {{expe.ubicacion}}</p>
+    </div>
+    <fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarExpe(expe)"></fa-icon>
+    <fa-icon *ngIf="esAdmin" id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
+</div>
+
+<div *ngIf="abrirModal == true">
+    <div class="contenedorEditar">
+        <button class="cerrar" (click)="cerrarModal()">Cerrar</button>
+        <h2>Editar Item</h2>
+        <div class="formulario">
+            <form [formGroup]="activeForm" novalidate>
+
+                <div class="form-control">
+                    <label for="titulo">Puesto</label>
+                    <input formControlName="titulo" type="text" name="titulo" id="titulo" placeholder="{{expe.titulo}}"
+                        required>
+                </div>
+
+                <div class="form-control">
+                    <label for="empresa">Empresa</label>
+                    <input formControlName="empresa" type="text" name="empresa" id="empresa"
+                        placeholder="{{expe.empresa}}" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="fecha">Fecha de comienzo</label>
+                    <input formControlName="fecha" type="text" name="fecha" id="fecha" placeholder="{{expe.fecha}}"
+                        required>
+                </div>
+
+                <div class="form-control">
+                    <label for="ubicacion">Ubicacion del trabajo</label>
+                    <input formControlName="ubicacion" type="text" name="ubicacion" id="ubicacion"
+                        placeholder="{{expe.ubicacion}}" required>
+                </div>
+
+                <input type="button" value="Actualizar Item" (click)="editarExperiencia(activeForm)" class="boton">
+            </form>
+        </div>
+    </div>
+</div>

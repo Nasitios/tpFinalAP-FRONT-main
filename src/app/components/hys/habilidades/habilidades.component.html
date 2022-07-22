@@ -1,0 +1,5 @@
+<app-agregar-habi (onAgregarHabilidad)="agregarHabilidades($event)"></app-agregar-habi>
+<div class="espacio">
+    <app-habi-item *ngFor="let habi of habilidades" [habi]="habi" (onEliminarHabi)="eliminarHabilidades(habi)">
+    </app-habi-item>
+</div>

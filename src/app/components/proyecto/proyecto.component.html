@@ -1,0 +1,9 @@
+<section id="proyectos" class="seccion">
+  <div class="espaTitulo">
+    <h3>{{titulo}}</h3>
+    <app-boton-pro *ngIf="esAdmin" class="boton" color="{{abrirProyecto ? 'black' : 'green'}}"
+      texto="{{abrirProyecto ? '-' : '+'}}" (btnClick)="toogleAgregarProyecto()">
+    </app-boton-pro>
+  </div>
+  <app-proyectos></app-proyectos>
+</section>

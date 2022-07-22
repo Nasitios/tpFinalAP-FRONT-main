@@ -1,0 +1,17 @@
+#arriba {
+    background-color: #9A616D;
+
+}
+div { background-color: #db9ba9;}
+
+.espaTitulo app-boton-per {
+    float: right;
+}
+
+
+
+h3 {
+    font-size: 20px;
+    margin: 15px 0px 0px 30px;
+    float: left;
+}

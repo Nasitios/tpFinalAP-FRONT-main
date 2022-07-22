@@ -1,0 +1,18 @@
+<div class="form">
+    <form [formGroup]="activeForm" *ngIf="abrirHabilidad" novalidate>
+
+        <div class="form-control">
+            <label for="titulo">Habilidad</label>
+            <input formControlName="titulo" type="text" name="titulo" id="titulo" placeholder="Nombre de la habilidad"
+                required>
+        </div>
+
+        <div class="form-control">
+            <label for="porcentaje">Porcentaje</label>
+            <input formControlName="porcentaje" type="number" name="porcentaje" id="porcentaje"
+                placeholder="Porcentaje de habilidad" required>
+        </div>
+
+        <input type="button" value="Guardar" (click)="onSubmit(activeForm)" class="boton">
+    </form>
+</div>

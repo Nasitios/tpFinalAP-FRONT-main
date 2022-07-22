@@ -1,0 +1,53 @@
+<div class="formulario">
+    <form #f="ngForm" (ngSubmit)="creandoCuenta()" novalidate>
+        <div class="form-grup">
+            <label for="nombre">Nombre</label>
+            <input
+                class="form-control"
+                type="text" 
+                name="nombre" 
+                id="nombre"
+                [(ngModel)]="nombre"
+                required
+            >
+        </div>
+        <div class="form-grup">
+            <label for="nombreUsuario">Nombre de Usuario</label>
+            <input 
+                class="form-control" 
+                type="text" 
+                name="nombreUsuario" 
+                id="nombreUsuario" 
+                [(ngModel)]="nombreUsuario"
+                required
+            >
+        </div>
+        <div class="form-grup">
+            <label for="email">Email</label>
+            <input 
+                class="form-control" 
+                type="text" 
+                name="email" 
+                id="email" 
+                [(ngModel)]="email"
+                required
+            >
+        </div>
+        <div class="form-grup">
+            <label for="password">Contraseña</label>
+            <input 
+                class="form-control" 
+                type="password" 
+                name="password"
+                id="password"
+                [(ngModel)]="password"
+                required>
+        </div>
+        <div class="form-grup">
+            <button class="boton" [disabled]="!f.valid">
+                <fa-icon [icon]="faEntrar"></fa-icon> Crear Cuenta
+            </button>
+        </div>
+    </form>
+
+</div>

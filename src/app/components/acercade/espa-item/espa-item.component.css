@@ -1,0 +1,33 @@
+.contenedorEspa {
+    display: flex;
+}
+
+.espa {
+    background-color: white;
+    box-shadow: 0px 3px 4px 2px rgb(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin: 10px;
+    width: auto;
+    float: left;
+    padding: 15px 15px 0px 15px;
+}
+
+#edit {
+    margin: 0px 0px 0px 10px;
+}
+
+#edit:hover {
+    color: rgb(156, 156, 156);
+}
+
+#delete:hover {
+    color: brown;
+}
+
+fa-icon:hover {
+    font-size: 20px;
+}
+
+fa-icon {
+    cursor: pointer;
+}

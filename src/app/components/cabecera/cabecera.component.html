@@ -1,0 +1,10 @@
+<section>
+    <div class="row">
+    <div id="arriba"><app-header></app-header></div>
+    <div class="espaTitulo" *ngIf="esAdmin">
+        <app-boton-per  class="boton" color="{{abrirPerfil ? 'black' : 'green'}}"
+            texto="{{abrirPerfil ? '-' : 'Agregar Perfil'}}" (btnClick)="toogleAgregarPerfil()">
+        </app-boton-per>
+    </div>
+    <app-perfiles></app-perfiles></div>
+</section>

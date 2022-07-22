@@ -1,0 +1,20 @@
+<div class="form">
+    <form 
+        [formGroup]="activeForm"
+        *ngIf="abrirEspacio"
+        novalidate
+    >
+    <div class="form-control">
+        <label for="texto">Texto</label>
+        <textarea 
+            formControlName = "texto"
+            name="texto" 
+            id="texto"
+            type="texto"
+            placeholder="Agrega tu descripcion"
+            required
+        ></textarea>
+    </div>
+    <input type="button" value="Guardar" (click)="onSubmit(activeForm)" class="boton">
+    </form>
+</div>

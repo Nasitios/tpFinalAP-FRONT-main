@@ -1,0 +1,5 @@
+<app-agregar-pro (onAgregarProyecto)="agregarProyectos($event)"></app-agregar-pro>
+<div class="espacio">
+    <app-pro-item *ngFor="let pro of proyectos" [pro]="pro" (onEliminarPro)="eliminarProyectos(pro)">
+    </app-pro-item>
+</div>

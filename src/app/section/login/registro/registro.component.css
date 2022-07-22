@@ -1,0 +1,23 @@
+.formulario {
+    background: #ad3b447e;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.form-grup {
+    background-color: transparent;
+    border: transparent;
+}
+
+.form-grup input {
+    width: 90%;
+    height: 40%;
+    margin: 0px 0px 10px 18px;
+    padding: 3px 7px;
+    font-size: 15px;
+}
+
+.form-grup button {
+    margin-bottom: 10px;
+}

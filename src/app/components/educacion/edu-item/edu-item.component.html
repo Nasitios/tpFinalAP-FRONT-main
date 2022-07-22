@@ -1,0 +1,44 @@
+<div class="contenedorEdu">
+    <div class="edu">
+        <p><b>{{edu.entidad}}</b> - {{edu.titulo}} - {{edu.fecha}} - {{edu.ubicacion}}</p>
+    </div>
+    <fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarEdu(edu)"></fa-icon>
+    <fa-icon *ngIf="esAdmin" id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
+</div>
+
+<div *ngIf="abrirModal == true">
+    <div class="contenedorEditar">
+        <button class="cerrar" (click)="cerrarModal()">Cerrar</button>
+        <h2>Editar Item</h2>
+        <div class="formulario">
+            <form [formGroup]="activeForm" novalidate>
+
+                <div class="form-control">
+                    <label for="entidad">Entidas educativa</label>
+                    <input formControlName="entidad" type="text" name="entidad" id="entidad"
+                        placeholder="{{edu.entidad}}" required>
+                </div>
+
+                <div class="form-control">
+                    <label for="titulo">Titulo obtenido</label>
+                    <input formControlName="titulo" type="text" name="titulo" id="titulo" placeholder="{{edu.titulo}}"
+                        required>
+                </div>
+
+                <div class="form-control">
+                    <label for="fecha">Fecha de comienzo</label>
+                    <input formControlName="fecha" type="text" name="fecha" id="fecha" placeholder="{{edu.fecha}}"
+                        required>
+                </div>
+
+                <div class="form-control">
+                    <label for="ubicacion">Ubicacion del trabajo</label>
+                    <input formControlName="ubicacion" type="text" name="ubicacion" id="ubicacion"
+                        placeholder="{{edu.ubicacion}}" required>
+                </div>
+
+                <input type="button" value="Actualizar Item" (click)="editarEducacion(activeForm)" class="boton">
+            </form>
+        </div>
+    </div>
+</div>

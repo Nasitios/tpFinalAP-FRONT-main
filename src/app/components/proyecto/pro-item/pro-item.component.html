@@ -1,0 +1,37 @@
+<div class="contenedorPro">
+    <div class="pro">
+        <p><b>{{pro.titulo}}</b> - {{pro.descripcion}} - <a [href]="pro.link" target="_blank">Ver web</a></p>
+    </div>
+    <fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarPro(pro)"></fa-icon>
+    <fa-icon *ngIf="esAdmin" id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
+</div>
+
+<div *ngIf="abrirModal == true">
+    <div class="contenedorEditar">
+        <button class="cerrar" (click)="cerrarModal()">Cerrar</button>
+        <h2>Editar Item</h2>
+        <div class="formulario">
+            <form [formGroup]="activeForm" novalidate>
+
+                <div class="form-control">
+                    <label for="titulo">Nombre del proyecto</label>
+                    <input formControlName="titulo" type="text" name="titulo" id="titulo" placeholder="{{pro.titulo}}"
+                        required>
+                </div>
+
+                <div class="form-control">
+                    <label for="descripcion">Descripcion</label>
+                    <textarea formControlName="descripcion" type="text" name="descripcion" id="descripcion"
+                        placeholder="{{pro.descripcion}}" required></textarea>
+                </div>
+
+                <div class="form-control">
+                    <label for="link">Enlace al sitio</label>
+                    <input formControlName="link" type="text" name="link" id="link" placeholder="{{pro.link}}" required>
+                </div>
+
+                <input type="button" value="Actualizar Item" (click)="editarProyecto(activeForm)" class="boton">
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<app-agregar-espa
+    (onAgregarEspacio)="agregarEspacios($event)"
+></app-agregar-espa>
+<div class="espacio">
+    <app-espa-item
+        *ngFor="let espa of espacios"
+        [espa] = "espa"
+        (onEliminarEspa)="eliminarEspacios(espa)"
+    ></app-espa-item>
+</div>

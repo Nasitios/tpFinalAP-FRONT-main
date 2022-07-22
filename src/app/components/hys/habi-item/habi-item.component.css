@@ -1,0 +1,78 @@
+.contenedorHabi {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 5px 0px 5px;
+}
+
+.contenedorHabi fa-icon {
+    cursor: pointer;
+}
+
+#edit {
+    margin: 0px 0px 0px 10px;
+}
+
+#edit:hover {
+    color: rgb(156, 156, 156);
+}
+
+#delete:hover {
+    color: brown;
+}
+
+.contenedorHabi fa-icon:hover {
+    font-size: 20px;
+}
+
+.cajaTitulo {
+    text-align: center;
+    position: absolute;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+.habi {
+    background-color: white;
+    box-shadow: 0px 3px 4px 2px rgb(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+.habi:hover {
+    box-shadow: 3px 3px 4px rgb(0, 0, 0, 0.5);
+}
+
+.botonEliminar {
+    margin: 5px;
+    float: right;
+    background-color: rgb(255, 83, 83);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.botonEliminar:hover {
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: red;
+}
+
+.botonEditar {
+    float: right;
+    margin: 5px;
+    background-color: rgb(255, 255, 100);
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.botonEditar:hover {
+    background-color: yellow;
+    border: 2px solid black;
+}

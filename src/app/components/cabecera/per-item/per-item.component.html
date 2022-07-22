@@ -1,0 +1,85 @@
+<fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarPer(per)" class="btn-dark btn-lg"></fa-icon>
+<a href="#editor" *ngIf="esAdmin"><fa-icon  id="edit" [icon]="faPencil" (click)="openModal()" class="btn-dark btn-lg"></fa-icon></a>
+
+
+<div class="contenedorPer">
+    <div id="banner">
+        <img [src]="per.imgPortada" class="imgPortada" alt="Foto de Portada">
+    </div>
+    <div class="about">
+        <div class="row">
+            <div class="col-12 col-sm-2">  
+                <img [src]="per.imgPerfil" class="img-fluid" id="foto-perfil">
+            </div>
+            <div class="col-xs-12 col-sm-2">
+                <p id="nombre">{{per.nombre}}</p>
+                <p>{{per.titulo}}</p>
+                <p>{{per.email}}</p>
+                <p>{{per.ubicacion}}</p>
+                
+            </div>
+            <div class="col-xs-12 col-sm-8">
+                <span>
+                    <app-acercade></app-acercade>
+                </span>
+            </div>
+            
+            
+        </div>
+            
+    </div>
+    </div>
+
+
+<div *ngIf="abrirModal">
+    <div id="editor">
+        <button class="cerrar" (click)="cerrarModal()">Cerrar</button>
+        <h2>Editar Perfil</h2>
+        <div class="formulario">
+            <form [formGroup]="activeForm" novalidate>
+
+                <div class="form-control">
+                    <label for="nombre">Nombre Completo</label>
+                    <input formControlName="nombre" type="text" name="nombre" id="nombre" value="{{per.nombre}}" placeholder="{{per.nombre}}"
+                        required>
+                </div>
+
+                <div class="form-control">
+                    <label for="titulo">Titulo obtenido</label>
+                    <input formControlName="titulo" type="text" name="titulo" id="titulo" value="{{per.titulo}}" placeholder="{{per.titulo}}"
+                        required>
+                </div>
+
+                <div class="form-control">
+                    <label for="ubicacion">Lugar en donde vives</label>
+                    <input formControlName="ubicacion" type="text" name="ubicacion" id="ubicacion"
+                        value="{{per.ubicacion}}" placeholder="{{per.ubicacion}}" required >
+                </div>
+
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input formControlName="email" type="text" name="email" id="email" value="{{per.email}}" placeholder="{{per.email}}"
+                        required>
+                </div>
+
+                <div class="form-control">
+                    <label for="imgPerfil">Agrega una foto de perfil</label>
+                    <div class="vista">
+                        <input class="custum-file-input" (change)="capturarPerfil($event)" type="file" name="imgPerfil"
+                            id="imgPerfil" required>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label for="imgPortada">Agrega una foto de portada</label>
+                    <div class="vista">
+                        <input class="custum-file-input" (change)="capturarPortada($event)" type="file"
+                            name="imgPortada" id="imgPortada" required>
+                    </div>
+                </div>
+
+                <input type="button" value="Actualizar Item" (click)="editarPerfil(activeForm)" class="boton">
+            </form>
+        </div>
+    </div>
+</div>

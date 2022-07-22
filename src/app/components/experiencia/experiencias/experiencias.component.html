@@ -1,0 +1,5 @@
+<app-agregar-expe (onAgregarExperiencia)="agregarExperiencias($event)"></app-agregar-expe>
+<div class="espacio">
+    <app-expe-item *ngFor="let expe of experiencias" [expe]="expe" (onEliminarExpe)="eliminarExperiencias(expe)">
+    </app-expe-item>
+</div>

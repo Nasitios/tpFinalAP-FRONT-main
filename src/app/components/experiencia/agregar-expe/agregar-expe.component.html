@@ -1,0 +1,30 @@
+<div class="form">
+    <form [formGroup]="activeForm" *ngIf="abrirExperiencia" novalidate>
+
+        <div class="form-control">
+            <label for="titulo">Puesto</label>
+            <input formControlName="titulo" type="text" name="titulo" id="titulo" placeholder="Tu puesto en la empresa"
+                required>
+        </div>
+
+        <div class="form-control">
+            <label for="empresa">Empresa</label>
+            <input formControlName="empresa" type="text" name="empresa" id="empresa"
+                placeholder="La empresa que te contrato" required>
+        </div>
+
+        <div class="form-control">
+            <label for="fecha">Fecha</label>
+            <input formControlName="fecha" type="text" name="fecha" id="fecha"
+                placeholder="Fecha en la que se te contrato" required>
+        </div>
+
+        <div class="form-control">
+            <label for="ubicacion">Ubicacion</label>
+            <input formControlName="ubicacion" type="text" name="ubicacion" id="ubicacion"
+                placeholder="Lugar del trabajo" required>
+        </div>
+
+        <input type="button" value="Guardar" (click)="onSubmit(activeForm)" class="boton">
+    </form>
+</div>

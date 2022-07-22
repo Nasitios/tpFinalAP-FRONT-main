@@ -1,0 +1,23 @@
+<div class="form">
+    <form [formGroup]="activeForm" *ngIf="abrirProyecto" novalidate>
+
+        <div class="form-control">
+            <label for="titulo">Nombre del proyecto</label>
+            <input formControlName="titulo" type="text" name="titulo" id="titulo"
+                placeholder="El nombre del proyecto realizado" required>
+        </div>
+
+        <div class="form-control">
+            <label for="descripcion">Descripcion</label>
+            <textarea formControlName="descripcion" type="text" name="descripcion" id="descripcion"
+                placeholder="Descripcion del proyecto" required></textarea>
+        </div>
+
+        <div class="form-control">
+            <label for="link">Enlace al sitio</label>
+            <input formControlName="link" type="text" name="link" id="link" placeholder="Ruta al proyecto" required>
+        </div>
+
+        <input type="button" value="Guardar" (click)="onSubmit(activeForm)" class="boton">
+    </form>
+</div>

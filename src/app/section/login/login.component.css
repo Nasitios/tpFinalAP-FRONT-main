@@ -1,0 +1,23 @@
+.modalll {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.589);
+}
+
+.modal-body {
+    position: absolute;
+    z-index: 1100;
+}
+
+.modal-content {
+    background-color: white;
+    width: 400px;
+    height: auto;
+    margin: -200px 0px 0px -180px;
+    padding: 10px;
+    text-align: center;
+}

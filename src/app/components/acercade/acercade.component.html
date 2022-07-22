@@ -1,0 +1,14 @@
+<section id="acercade" class="seccion">
+    <div class="espaTitulo">
+        <h3>{{titulo}}</h3>
+        <app-boton-espa
+            *ngIf="esAdmin"
+            class="btn"
+            color="{{abrirEspacio ? 'black' : 'blue'}}"
+            texto="{{abrirEspacio ? '-' : '+'}}"
+            (btnClick)="toogleAgregarEspacio()"
+            
+        ></app-boton-espa>
+    </div> 
+    <app-espacio></app-espacio>
+</section>

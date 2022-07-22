@@ -1,0 +1,34 @@
+<div class="contenedorEspa">
+    <div class="espa">
+        <p>{{espa.texto}}</p>
+    </div>
+    <fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarEspa(espa)"></fa-icon>
+    <fa-icon *ngIf="esAdmin" id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
+</div>
+
+<div *ngIf="abrirModal == true">
+    <div class="contenedorEditar">
+        <button class="cerrar" (click)="cerrarModal()">Cerrar</button>
+        <h2>Editar Item</h2>
+        <div class="formulario">
+            <form
+                [formGroup]="activeForm"
+                novalidate
+            >
+            <div class="form-control">
+                <label for="texto">Texto</label>
+                <textarea
+                    formControlName="texto"
+                    type="text"
+                    name="texto" 
+                    id="texto"
+                    placeholder="{{espa.texto}}"
+                    required=""
+                ></textarea>
+            </div>
+            <div></div>
+            <input type="button" value="Actualizar Item" (click)="editarEspa(activeForm)" class="boton">
+            </form>
+        </div>
+    </div>
+</div>

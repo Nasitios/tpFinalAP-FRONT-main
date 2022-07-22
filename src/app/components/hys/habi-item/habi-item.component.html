@@ -1,0 +1,39 @@
+<div class="contenedorHabi">
+
+    <div class="cajaTitulo">
+        <h5>{{habi.titulo}}</h5>
+        <fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarHabi(habi)"></fa-icon>
+        <fa-icon *ngIf="esAdmin" id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
+    </div>
+    <circle-progress [percent]="habi.porcentaje" [radius]="95" [showImage]="true" [imageHeight]="0" [imageWidth]="0"
+        [outerStrokeWidth]="16" [innerStrokeWidth]="2"  [outerStrokeColor]="'#408AF6'" [innerStrokeColor]="'grey'"
+        [animation]="true" [animationDuration]="1500">
+    </circle-progress>
+
+</div>
+
+
+<div *ngIf="abrirModal == true">
+    <div class="contenedorEditar">
+        <button class="cerrar" (click)="cerrarModal()">Cerrar</button>
+        <h2>Editar Item</h2>
+        <div class="formulario">
+            <form [formGroup]="activeForm" novalidate>
+
+                <div class="form-control">
+                    <label for="titulo">Puesto</label>
+                    <input formControlName="titulo" type="text" name="titulo" id="titulo" placeholder="{{habi.titulo}}"
+                        required>
+                </div>
+
+                <div class="form-control">
+                    <label for="porcentaje">Ubicacion del trabajo</label>
+                    <input formControlName="porcentaje" type="number" name="porcentaje" id="porcentaje"
+                        placeholder="{{habi.porcentaje}}" required>
+                </div>
+
+                <input type="button" value="Actualizar Item" (click)="editarHabilidad(activeForm)" class="boton">
+            </form>
+        </div>
+    </div>
+</div>

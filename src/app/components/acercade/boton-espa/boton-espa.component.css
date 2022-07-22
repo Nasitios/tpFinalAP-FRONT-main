@@ -1,0 +1,20 @@
+.btnMas {
+    color: white;
+    border: 1px solid black;
+    padding: 5px 5px;
+    margin: 15px 30px 5px 0px;
+    border-radius:  5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.btnMas:hover {
+    border: 2px solid black;
+    color: rgb(255, 255, 255);
+}
+
+.btnMas:active{
+    transform: scale(0.98);
+}

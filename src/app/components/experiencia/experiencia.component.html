@@ -1,0 +1,9 @@
+<section id="experiencia" class="seccion">
+  <div class="espaTitulo">
+    <h3>{{titulo}}</h3>
+    <app-boton-expe *ngIf="esAdmin" class="boton" color="{{abrirExperiencia ? 'black' : 'green'}}"
+      texto="{{abrirExperiencia ? '-' : '+'}}" (btnClick)="toogleAgregarExperiencia()">
+    </app-boton-expe>
+  </div>
+  <app-experiencias></app-experiencias>
+</section>

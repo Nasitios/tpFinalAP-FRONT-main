@@ -1,0 +1,46 @@
+<div class="form" *ngIf="abrirPerfil" >
+    <form [formGroup]="activeForm" novalidate>
+
+        <div class="form-control">
+            <label for="nombre">Nombre Completo</label>
+            <input formControlName="nombre" type="text" name="nombre" id="nombre"
+                placeholder="Ingresa tu nombre completo" required>
+        </div>
+
+        <div class="form-control">
+            <label for="titulo">Titulo optenido</label>
+            <input formControlName="titulo" type="text" name="titulo" id="titulo" placeholder="Titulo que posees"
+                required>
+        </div>
+
+        <div class="form-control">
+            <label for="ubicacion">Lugar en donde vives</label>
+            <input formControlName="ubicacion" type="text" name="ubicacion" id="ubicacion"
+                placeholder="Ingresa la ciudad y Pais en que vives" required>
+        </div>
+
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input formControlName="email" type="text" name="email" id="email" placeholder="Tu email de contacto"
+                required>
+        </div>
+
+        <div class="form-control">
+            <label for="imgPerfil">Agrega una foto de perfil</label>
+            <div class="vista">
+                <input class="custum-file-input" (change)="capturarPerfil($event)" type="file" name="imgPerfil"
+                    id="imgPerfil" required>
+            </div>
+        </div>
+
+        <div class="form-control">
+            <label for="imgPortada">Agrega una foto de portada</label>
+            <div class="vista">
+                <input class="custum-file-input" (change)="capturarPortada($event)" type="file" name="imgPortada"
+                    id="imgPortada" required>
+            </div>
+        </div>
+
+        <input type="button" value="Guardar" (click)="onSubmit(activeForm)" class="boton">
+    </form>
+</div>
