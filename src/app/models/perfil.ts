@@ -4,6 +4,9 @@ export interface Perfil {
     titulo: string;
     ubicacion: string;
     email: string;
+    github: string;
+    linkedin: string;
+    instagram: string;
     imgPerfil: string;
     imgPortada: string;
 }

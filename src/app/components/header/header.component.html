@@ -5,10 +5,10 @@
                 <img src="../../../assets/APLogooo.png" alt="Proyecto desarrollado en el marco del Plan Argentina Programa">
             </div>
             <div class="redes">
-                <a href=""><img src="../../../assets/github.png" alt=""></a>
-                <a href=""><img src="../../../assets/instagram.png" alt=""></a>
-                <a href=""><img src="../../../assets/linkedin.png" alt=""></a>
-                <a href="login" class="btn btn-outline-light" *ngIf="!estaLogeado">LOGIN</a>
+                <a href="https://github.com/{{per.github}}" target="_blank"><img src="../../../assets/github.png" alt="Github" ></a>
+                <a href="https://www.instagram.com/{{per.instagram}}" target="_blank"><img src="../../../assets/instagram.png" alt="Instagram" ></a>
+                <a href="https://www.linkedin.com/in/{{per.linkedin}}" target="_blank"><img src="../../../assets/linkedin.png" alt="Linkedin" ></a>
+                <a href="/login" class="btn btn-outline-light" *ngIf="!estaLogeado">LOGIN</a>
                 <a href="#" (click)="cerrarSesion()" *ngIf="estaLogeado" class="btn btn-outline-light">Cerrar Sesión<fa-icon [icon]="faLogin"></fa-icon>
 
             </a></div>

@@ -56,6 +56,9 @@ export const PER: Perfil[] = [
         titulo: "",
         ubicacion: "",
         email: "",
+        github: "",
+        linkedin: "",
+        instagram: "",
         imgPerfil: "",
         imgPortada: ""
     }

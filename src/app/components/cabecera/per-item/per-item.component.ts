@@ -31,6 +31,10 @@ export class PerItemComponent implements OnInit {
   titulo: string = "";
   ubicacion: string = "";
   email: string = "";
+  github: string = "";
+  linkedin: string = "";
+  instagram: string = "";
+
 
   constructor(
     private eduPer: PerfilService,
@@ -42,7 +46,10 @@ export class PerItemComponent implements OnInit {
       nombre: new FormControl,
       titulo: new FormControl,
       ubicacion: new FormControl,
-      email: new FormControl
+      email: new FormControl,
+      github: new FormControl,
+      linkedin: new FormControl,
+      instagram: new FormControl
     })
   }
 

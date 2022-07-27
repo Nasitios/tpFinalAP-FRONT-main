@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { TokenService } from 'src/app/service/token.service';
+import { PerfilService } from 'src/app/service/perfil.service';
+import { Perfil } from 'src/app/models/perfil';
+import { PER } from 'src/app/mock-tasck';
 
 @Component({
   selector: 'app-header',
@@ -13,15 +16,19 @@ export class HeaderComponent implements OnInit {
   public estaLogeado: boolean = false;
   public abrirFormularioLogin: boolean = false;
   public abrirModalReg: Boolean = false;
-
+  public per: Perfil = PER[0];
   faLogin = faAngleRight;
 
   constructor(
-    private tokenService: TokenService
-  ) { }
+    private tokenService: TokenService,
+    public perfilobter: PerfilService) { }
+
 
   ngOnInit(): void {
     this.estaLogeado = this.tokenService.estaLogeado();
+    this.perfilobter.getPerfil().subscribe((data) => {
+      this.per = data[0];
+    })
   }
 
   onMenu() {
@@ -34,23 +41,6 @@ export class HeaderComponent implements OnInit {
 
   cerrarSesion(){
     this.tokenService.logOut();
-  }
-
-  abrirModal(){
-    this.abrirFormularioLogin = true;
-  }
-
-  cerrarModal(){
-    this.abrirFormularioLogin = false;
-  }
-
-  abrirModalRegistro(){
-    this.abrirModalReg = true;
-  }
-
-  cerrarModalRegistro(){
-    this.abrirModalReg = false;
-    this.abrirFormularioLogin = true;
   }
 
 }

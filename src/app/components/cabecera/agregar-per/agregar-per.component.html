@@ -26,6 +26,22 @@
         </div>
 
         <div class="form-control">
+            <label for="github">Usuario de Github</label>
+            <input formControlName="github" type="text" name="github" id="github"  placeholder="Tu usuario de Github"
+                required>
+        </div>
+        <div class="form-control">
+            <label for="linkedin">Usuario de Linkedin</label>
+            <input formControlName="linkedin" type="text" name="linkedin" id="linkedin"  placeholder="Tu usuario de Linkedin"
+                required>
+        </div>
+        <div class="form-control">
+            <label for="instagram">Usuario de Instagram</label>
+            <input formControlName="instagram" type="text" name="instagram" id="instagram"  placeholder="Tu usuario de Instagram"
+                required>
+        </div>
+
+        <div class="form-control">
             <label for="imgPerfil">Agrega una foto de perfil</label>
             <div class="vista">
                 <input class="custum-file-input" (change)="capturarPerfil($event)" type="file" name="imgPerfil"

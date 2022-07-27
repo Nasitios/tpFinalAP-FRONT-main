@@ -17,6 +17,10 @@ export class AgregarPerComponent implements OnInit {
   titulo: string = "";
   ubicacion: string = "";
   email: string = "";
+  github: string = "";
+  linkedin: string = "";
+  instagram: string = "";
+
 
   public usFilePerfil: any = File;
   public usFilePortada: any = File;
@@ -35,7 +39,10 @@ export class AgregarPerComponent implements OnInit {
       nombre: new FormControl,
       titulo: new FormControl,
       ubicacion: new FormControl,
-      email: new FormControl
+      email: new FormControl,
+      github: new FormControl,
+      linkedin: new FormControl,
+      instagram: new FormControl
     })
 
     this.aderir = this.uiService.onTogglePerfil()
