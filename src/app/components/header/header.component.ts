@@ -27,8 +27,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.estaLogeado = this.tokenService.estaLogeado();
     this.perfilobter.getPerfil().subscribe((data) => {
-      this.per = data[0];
-    })
+      if (data.length>0){
+      this.per = data[0];}
+    }) 
   }
 
   onMenu() {
